@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,9 +34,7 @@ public class ProductController {
     public ResponseEntity<ProductDto> createProduct(@RequestBody ProductDto productDto, @PathVariable Integer userId){
         ProductDto createProduct = this.productService.createProduct(productDto,userId);
         return new ResponseEntity<ProductDto>(createProduct, HttpStatus.CREATED);
-
     }
-
 //  update
     @PutMapping("products/{proId}")
     public ResponseEntity<ProductDto> updateProduct(@RequestBody ProductDto productDto,

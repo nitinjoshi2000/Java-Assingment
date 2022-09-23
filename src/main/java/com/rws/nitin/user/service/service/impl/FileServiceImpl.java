@@ -1,9 +1,7 @@
 package com.rws.nitin.user.service.service.impl;
-
 import com.rws.nitin.user.service.service.FileService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
